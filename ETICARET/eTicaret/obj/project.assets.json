@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\simge.polat\\Desktop\\ETICARET\\eTicaret\\eTicaret.csproj",
+      "projectUniqueName": "C:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\eTicaret.csproj",
       "projectName": "eTicaret",
-      "projectPath": "C:\\Users\\simge.polat\\Desktop\\ETICARET\\eTicaret\\eTicaret.csproj",
+      "projectPath": "C:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\eTicaret.csproj",
       "packagesPath": "C:\\Users\\simge.polat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\simge.polat\\Desktop\\ETICARET\\eTicaret\\obj\\",
+      "outputPath": "C:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
