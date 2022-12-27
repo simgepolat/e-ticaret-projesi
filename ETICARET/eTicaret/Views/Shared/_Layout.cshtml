@@ -24,12 +24,11 @@
     
     
     @await Html.PartialAsync("_navbar")
-    <partial name="_header">
 
-    <main>
-
-        
-        
+    @RenderSection("Header",false)
+    
+    <main class="my-5">
+ 
         <div class="container">
 
             @if(IsSectionDefined("Categories"))

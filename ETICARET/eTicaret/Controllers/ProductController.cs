@@ -20,16 +20,25 @@ namespace eTicaret.Controllers
                 return View();
             }
         
-        public IActionResult list(int? id)
+        public IActionResult list(int? id, string q)
         {
             // Console.WriteLine(RouteData.Values["contoller"]);
             // Console.WriteLine(RouteData.Values["action"]);
             // Console.WriteLine(RouteData.Values["id"]);
 
+            // QueryString
+            // Console.WriteLine(HttpContext.Request.Query["q"].ToString());
+
             var products=ProductRepository.Products;
+
             if(id!=null)
             {
                 products=products.Where(p=>p.CategoryId==id).ToList();
+            }
+
+            if(!string.IsNullOrEmpty(q))
+            {
+                products= products.Where(i=>i.Name.ToLower().Contains(q.ToLower()) || i.Description.ToLower().Contains(q.ToLower())).ToList();
             }
 
             var ProductViewModel=new ProductViewModel()
@@ -44,5 +53,10 @@ namespace eTicaret.Controllers
             {
                 return View(ProductRepository.GetProductById(id));
             }
+        
+        public IActionResult Create(string name, double price)
+        {
+            return View();
+        }
     }
 }
