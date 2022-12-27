@@ -61,14 +61,19 @@ namespace eTicaret.Controllers
         public IActionResult Create()
         {
             ViewBag.Categories=new SelectList(CategoryRepository.Categories,"CategoryId","Name");
-            return View();
+            return View(new Product());
         }
 
         [HttpPost]
         public IActionResult Create(Product p)
         {
-            ProductRepository.AddProduct(p);
-            return RedirectToAction("list");
+            if(ModelState.IsValid)
+            {
+                ProductRepository.AddProduct(p);
+                return RedirectToAction("list");
+            }
+            return View(p);
+
         }
 
         [HttpGet]
