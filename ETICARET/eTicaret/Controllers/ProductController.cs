@@ -72,6 +72,7 @@ namespace eTicaret.Controllers
                 ProductRepository.AddProduct(p);
                 return RedirectToAction("list");
             }
+            ViewBag.Categories = new SelectList(CategoryRepository.Categories,"CategoryId","Name");
             return View(p);
 
         }
@@ -89,5 +90,12 @@ namespace eTicaret.Controllers
             ProductRepository.EditProduct(p);
             return RedirectToAction("list");
         }
+
+         [HttpPost]
+         public IActionResult Delete(int ProductId)
+         {
+             ProductRepository.DeleteProduct(ProductId);
+             return RedirectToAction("list");
+         }
     }
 }

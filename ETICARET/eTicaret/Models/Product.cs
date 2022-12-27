@@ -15,12 +15,15 @@ namespace eTicaret.Models
         public string Name { get; set; }
 
         [Required(ErrorMessage ="Fiyat girilmeli!")]
+        [Range(1,10000)]
         public double? Price { get; set; }
         public string Description { get; set; }
 
         [Required]
          public string ImageUrl { get; set; }
         public bool IsApproved { get; set; }
-        public int CategoryId { get; set; }
+
+        [Required]
+        public int? CategoryId { get; set; }
     }
 }

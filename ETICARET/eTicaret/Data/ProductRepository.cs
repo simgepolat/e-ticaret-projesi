@@ -46,7 +46,8 @@ namespace eTicaret.Data
         }
 
         //liste üzerinden bir eleman eklenmek istenildiğinde
-        public static void AddProduct(Product product){
+        public static void AddProduct(Product product)
+        {
             _products.Add(product);
         }
 
@@ -71,5 +72,14 @@ namespace eTicaret.Data
                 }
             }
         }
+          public static void DeleteProduct(int id)
+         {
+             var product = GetProductById(id);
+
+             if (product != null)
+             {
+                 _products.Remove(product);
+             }
+         }
     }
 }
