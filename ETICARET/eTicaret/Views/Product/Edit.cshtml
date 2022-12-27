@@ -1,6 +1,7 @@
 @model Product
-<form action="/product/create" method="POST">
-    <input type="hidden" name="ProductId" value="@Model.ProductId" />
+
+<form  method="POST">
+    <input type="hidden" name="ProductId" value="@Model.ProductId">
     <div class="form-group">
         <label for="Name">Name</label>
         <input asp-for="Name" value="@Model.Name" class="form-control">
