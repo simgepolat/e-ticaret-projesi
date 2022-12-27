@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using eTicaret.Data;
 using eTicaret.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace eTicaret.Controllers
 {
@@ -49,14 +50,39 @@ namespace eTicaret.Controllers
 
             return View(ProductViewModel);   
         }
+
+        [HttpGet]
         public IActionResult Details(int id)
             {
                 return View(ProductRepository.GetProductById(id));
             }
         
-        public IActionResult Create(string name, double price)
+        [HttpGet]
+        public IActionResult Create()
         {
+            ViewBag.Categories=new SelectList(CategoryRepository.Categories,"CategoryId","Name");
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Product p)
+        {
+            ProductRepository.AddProduct(p);
+            return RedirectToAction("list");
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            ViewBag.Categories=new SelectList(CategoryRepository.Categories,"CategoryId","Name");
+            return View(ProductRepository.GetProductById(id));
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Product p)
+        {
+            ProductRepository.EditProduct(p);
+            return RedirectToAction("list");
         }
     }
 }
