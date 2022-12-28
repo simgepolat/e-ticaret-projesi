@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using eTicaret.business.Abstract;
 using eTicaret.entity;
+using eTicaret.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eTicaret.Controllers
@@ -16,28 +17,31 @@ namespace eTicaret.Controllers
             this._productService=productService;
         }
 
-        public IActionResult List()
+        public IActionResult List(string category)
         {
             var productViewModel = new ProductListViewModel()
             {
-                Products = _productService.GetAll()
+                Products = _productService.GetProductByCategory(category)
             };
 
             return View(productViewModel);
         }
-        public IActionResult Details(int? id)
+        public IActionResult Details(string url)
         {
-            if(id==null)
+            if(url==null)
             {
                 return NotFound();
             }
-            Product product= _productService.GetById((int)id);
+            Product product= _productService.GetProductDetails(url);
 
             if(product==null)
             {
                 return NotFound();
             }
-            return View(product);
+            return View(new ProductDetailModel{
+                Product=product,
+                Categories=product.ProductCategories.Select(i=>i.Category).ToList()
+            });
             
         }
     }

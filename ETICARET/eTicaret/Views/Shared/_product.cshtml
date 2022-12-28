@@ -10,8 +10,8 @@
     </div>
     <div>
         <div class="card-footer text-center">
-            <a asp-controller="shop" asp-action="Details" asp-route-id="@Model.ProductId" class="btn btn-success btn-sm ">incele</a>
-            <a asp-controller="shop" asp-action="addtocart" asp-route-id="@Model.ProductId" class="btn btn-success btn-sm ">sepete ekle</a>
+            <a asp-controller="shop" asp-action="Details" asp-route-url="@Model.Url" class="btn btn-success btn-sm ">incele</a>
+            <a asp-controller="shop" asp-action="addtocart" asp-route-url="@Model.ProductId" class="btn btn-success btn-sm ">sepete ekle</a>
         </div>
     </div>
 </div>

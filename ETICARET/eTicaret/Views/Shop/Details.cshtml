@@ -1,16 +1,22 @@
-@model Product
+@model ProductDetailModel
 
 <div class="row ">
     <div class="col-md-3">
-        <img src="~/img/@Model.ImageUrl" class="img-fluid">
+        <img src="~/img/@Model.Product.ImageUrl" class="img-fluid">
     </div>
     <div class="col-md-9" >
         
-            <h1 class="mb-3">@Model.Name</h1>
+            <h1 class="mb-3">@Model.Product.Name</h1>
              <hr>
-            <a href="#" class="btn btn-link p-0 mb-36"></a>
+
+            @foreach (var item in Model.Categories)
+            {
+                <a asp-controller="shop" asp-action="list" asp-route-category="@item.Url" class="btn btn-link p-0 mb-3">@item.Name</a>
+            }
+
+            
             <div class="mb-3">
-                <h4 class="text-primary mb-3"> <i class="fas fa-lira-sign"></i>@Model.Price</h4>
+                <h4 class="text-primary mb-3"> <i class="fas fa-lira-sign"></i>@Model.Product.Price</h4>
                 <button type="submit" class="btn btn-primary btn-lg"> Sepete Ekle</button>
             </div>
             
@@ -25,6 +31,6 @@
 <div class="row">
     <div class="col-md-12">
         <h3>Ürün Bilgisi</h3>
-        <p class="p-3">@Model.Description</p>
+        <p class="p-3">@Model.Product.Description</p>
     </div>
 </div>

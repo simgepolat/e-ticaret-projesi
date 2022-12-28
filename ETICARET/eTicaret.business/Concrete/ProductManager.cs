@@ -35,6 +35,16 @@ namespace eTicaret.business.Concrete
             return _productRepository.GetById(id);
         }
 
+        public List<Product> GetProductByCategory(string name)
+        {
+            return _productRepository.GetProductsByCategory(name);
+        }
+
+        public Product GetProductDetails(string url)
+        {
+            return _productRepository.GetProductDetails(url);
+        }
+
         public void Update(Product entity)
         {
             throw new System.NotImplementedException();

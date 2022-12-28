@@ -6,6 +6,8 @@ namespace eTicaret.business.Abstract
     public interface IProductService
     {
         Product GetById(int id);
+        Product GetProductDetails(string url);
+        List<Product> GetProductByCategory(string name);
 
         List<Product> GetAll();
 
