@@ -1,7 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace eTicaret.data.Abstract
 {
@@ -14,6 +11,6 @@ namespace eTicaret.data.Abstract
         void Create(T entity);
 
         void Update(T entity);
-        void Delete(int id);
+        void Delete(T entity);
     }
 }

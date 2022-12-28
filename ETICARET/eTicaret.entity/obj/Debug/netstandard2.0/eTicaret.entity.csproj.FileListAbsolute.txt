@@ -1,0 +1,16 @@
+C:\Users\simge.polat\Desktop\ETICARET\eTicaret.entity\bin\Debug\netstandard2.0\eTicaret.entity.deps.json
+C:\Users\simge.polat\Desktop\ETICARET\eTicaret.entity\bin\Debug\netstandard2.0\eTicaret.entity.dll
+C:\Users\simge.polat\Desktop\ETICARET\eTicaret.entity\bin\Debug\netstandard2.0\eTicaret.entity.pdb
+C:\Users\simge.polat\Desktop\ETICARET\eTicaret.entity\obj\Debug\netstandard2.0\eTicaret.entity.csprojAssemblyReference.cache
+C:\Users\simge.polat\Desktop\ETICARET\eTicaret.entity\obj\Debug\netstandard2.0\eTicaret.entity.AssemblyInfoInputs.cache
+C:\Users\simge.polat\Desktop\ETICARET\eTicaret.entity\obj\Debug\netstandard2.0\eTicaret.entity.AssemblyInfo.cs
+C:\Users\simge.polat\Desktop\ETICARET\eTicaret.entity\obj\Debug\netstandard2.0\eTicaret.entity.dll
+C:\Users\simge.polat\Desktop\ETICARET\eTicaret.entity\obj\Debug\netstandard2.0\eTicaret.entity.pdb
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret.entity\bin\Debug\netstandard2.0\eTicaret.entity.deps.json
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret.entity\bin\Debug\netstandard2.0\eTicaret.entity.dll
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret.entity\bin\Debug\netstandard2.0\eTicaret.entity.pdb
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret.entity\obj\Debug\netstandard2.0\eTicaret.entity.AssemblyInfoInputs.cache
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret.entity\obj\Debug\netstandard2.0\eTicaret.entity.AssemblyInfo.cs
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret.entity\obj\Debug\netstandard2.0\eTicaret.entity.dll
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret.entity\obj\Debug\netstandard2.0\eTicaret.entity.pdb
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret.entity\obj\Debug\netstandard2.0\eTicaret.entity.csprojAssemblyReference.cache

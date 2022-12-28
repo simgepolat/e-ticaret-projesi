@@ -2,20 +2,30 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using eTicaret.Data;
-using eTicaret.Models;
+using eTicaret.data.Abstract;
+using eTicaret.data;
 using Microsoft.AspNetCore.Mvc;
+using eTicaret.business.Abstract;
 
 namespace eTicaret.Controllers
 {
     public class HomeController:Controller
     {
+        private IProductService _productService;
+
+        public HomeController(IProductService productService)
+        {
+            this._productService=productService;
+        }
+
+
+
         public IActionResult Index()
         {
             var ProductViewModel=new ProductViewModel()
             {
             
-                Products=ProductRepository.Products
+                Products= _productService.GetAll()
             };
 
 

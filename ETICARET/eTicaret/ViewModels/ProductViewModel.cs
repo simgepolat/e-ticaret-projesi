@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using eTicaret.Models;
+using eTicaret.entity;
 
 public class ProductViewModel
 {

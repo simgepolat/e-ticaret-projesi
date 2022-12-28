@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "tEf4fp8mPSTlSiVHiGOLXLdWlhEwvsCmxmduMAKx14qgVsWK4FUrql0fTO2HKt9SC2kw/Buwxq7IziG41HClxQ==",
+  "dgSpecHash": "siIoFgGpwhppMLRHBjRVRkvOtkH2QpFpn6bI0d9TUEuvcY0Mj29fppcRLwnppWRj3MFfzuwN3XKVkHySOYzeRA==",
   "success": true,
   "projectFilePath": "C:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret.entity\\eTicaret.entity.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\simge.polat\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\simge.polat\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
