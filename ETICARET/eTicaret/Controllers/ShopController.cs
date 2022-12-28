@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using eTicaret.business.Abstract;
+using eTicaret.entity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eTicaret.Controllers
@@ -23,6 +24,21 @@ namespace eTicaret.Controllers
             };
 
             return View(productViewModel);
+        }
+        public IActionResult Details(int? id)
+        {
+            if(id==null)
+            {
+                return NotFound();
+            }
+            Product product= _productService.GetById((int)id);
+
+            if(product==null)
+            {
+                return NotFound();
+            }
+            return View(product);
+            
         }
     }
 }

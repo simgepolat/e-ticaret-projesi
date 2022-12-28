@@ -14434,6 +14434,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Shop\\Details.cshtml",
+      "TargetPath": "Views\\Shop\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Home\\MyView.cshtml",
       "TargetPath": "Views\\Home\\MyView.cshtml",
       "FileKind": "mvc"
