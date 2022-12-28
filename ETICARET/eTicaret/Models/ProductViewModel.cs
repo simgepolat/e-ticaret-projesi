@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using eTicaret.entity;
 
-namespace eTicaret.ViewModels
+namespace eTicaret.Models
 {
 
 

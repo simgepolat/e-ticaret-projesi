@@ -1,4 +1,4 @@
-namespace eTicaret.ViewModels
+namespace eTicaret.Models
 {
     public class ProductModel
     {

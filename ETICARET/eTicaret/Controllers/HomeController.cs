@@ -6,7 +6,7 @@ using eTicaret.data.Abstract;
 using eTicaret.data;
 using Microsoft.AspNetCore.Mvc;
 using eTicaret.business.Abstract;
-using eTicaret.ViewModels;
+using eTicaret.Models;
 
 namespace eTicaret.Controllers
 {

@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using eTicaret.business.Abstract;
 using eTicaret.entity;
 using eTicaret.Models;
-using eTicaret.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eTicaret.Controllers

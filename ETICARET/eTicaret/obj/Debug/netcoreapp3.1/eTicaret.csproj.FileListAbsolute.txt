@@ -76,7 +76,6 @@ C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicar
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_categories.cshtml.g.cs
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_header.cshtml.g.cs
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout2.cshtml.g.cs
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_navbar.cshtml.g.cs
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_noproduct.cshtml.g.cs
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_product.cshtml.g.cs
@@ -142,3 +141,4 @@ C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicar
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\staticwebassets\eTicaret.StaticWebAssets.xml
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_search.cshtml.g.cs
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Shop\Search.cshtml.g.cs
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ProductList.cshtml.g.cs
