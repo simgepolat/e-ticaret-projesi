@@ -22,7 +22,7 @@ namespace eTicaret.Controllers
 
         public IActionResult Index()
         {
-            var ProductViewModel=new ProductViewModel()
+            var ProductViewModel=new ProductListViewModel()
             {
             
                 Products= _productService.GetAll()

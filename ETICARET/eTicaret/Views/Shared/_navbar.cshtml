@@ -1,16 +1,25 @@
 <div class="navbar bg-dark navbar-dark navbar-expand-sm">
         <div class="container">
-            <ul class="navbar-nav">
+            <a href="/" class="navbar-brand">Kırtasiye e-ticaret Sitesi</a>
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="/product/list" class="nav-link">Products</a>
+                    <a asp-controller="shop" asp-action="list" class="nav-link">Ürünler</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/product/create" class="nav-link">Add Product</a>
+                    <a href="" class="nav-link">Cart</a>
+                </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link">Orders</a>
+                </li>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">link 3</a>
+                    <a asp-controller="admin" asp-action="createproduct" class="nav-link">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="admin" asp-action="productlist" class="nav-link">Admin Ürünleri</a>
                 </li>
             </ul>
+
             <form action="/product/list" class="form-inline">
                 <input name="q" type="text" class="form-control mr-2" placeholder="Ara">
                 <button type="submit" class="btn btn-outline-light mr-0">Ara</button>
