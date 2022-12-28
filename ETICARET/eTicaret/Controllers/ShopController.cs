@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using eTicaret.business.Abstract;
 using eTicaret.entity;
 using eTicaret.Models;
+using eTicaret.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eTicaret.Controllers
@@ -17,11 +18,20 @@ namespace eTicaret.Controllers
             this._productService=productService;
         }
 
-        public IActionResult List(string category)
+         
+        public IActionResult List(string category,int page=1)
         {
+            const int pageSize=6;
             var productViewModel = new ProductListViewModel()
             {
-                Products = _productService.GetProductByCategory(category)
+                PageInfo= new PageInfo()
+                {
+                    TotalItems=_productService.GetCountByCategory(category),
+                    CurrentPage=page,
+                    ItemsPerPage=pageSize,
+                    CurrentCategory=category
+                },
+                Products = _productService.GetProductByCategory(category,page, pageSize)
             };
 
             return View(productViewModel);
@@ -44,5 +54,15 @@ namespace eTicaret.Controllers
             });
             
         }
+
+        public IActionResult Search(string q)
+        {
+            var productViewModel = new ProductListViewModel()
+            {
+                Products = _productService.GetSearchResult(q)
+            };
+
+            return View(productViewModel);
+        } 
     }
 }

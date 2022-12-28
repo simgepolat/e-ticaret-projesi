@@ -1,4 +1,4 @@
-namespace shopapp.webui.ViewModels
+namespace eTicaret.ViewModels
 {
     public class ProductModel
     {

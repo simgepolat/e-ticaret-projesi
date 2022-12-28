@@ -7,13 +7,16 @@ namespace eTicaret.business.Abstract
     {
         Product GetById(int id);
         Product GetProductDetails(string url);
-        List<Product> GetProductByCategory(string name);
+        List<Product> GetProductByCategory(string name, int page, int pageSize);
 
         List<Product> GetAll();
+        List<Product> GetHomePageProducts();
+        List<Product> GetSearchResult(string searchString);
 
         void Create(Product entity);
 
         void Update(Product entity);
         void Delete(Product entity);
+        int GetCountByCategory(string category);
     }
 }

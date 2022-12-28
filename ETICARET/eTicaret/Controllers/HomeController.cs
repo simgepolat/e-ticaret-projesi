@@ -6,6 +6,7 @@ using eTicaret.data.Abstract;
 using eTicaret.data;
 using Microsoft.AspNetCore.Mvc;
 using eTicaret.business.Abstract;
+using eTicaret.ViewModels;
 
 namespace eTicaret.Controllers
 {
@@ -25,7 +26,7 @@ namespace eTicaret.Controllers
             var ProductViewModel=new ProductListViewModel()
             {
             
-                Products= _productService.GetAll()
+                Products= _productService.GetHomePageProducts()
             };
 
 
