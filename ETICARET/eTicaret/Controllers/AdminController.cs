@@ -106,7 +106,7 @@ namespace eTicaret.Controllers
                 return NotFound();
             }
 
-            var entity = _productService.GetById((int)id);
+            var entity = _productService.GetByIdWithCategories((int)id);
 
             if(entity==null)
             {
@@ -120,13 +120,15 @@ namespace eTicaret.Controllers
                 Url = entity.Url,
                 Price = entity.Price,
                 ImageUrl= entity.ImageUrl,
-                Description = entity.Description
+                Description = entity.Description,
+                SelectedCategories = entity.ProductCategories.Select(i=>i.Category).ToList()
             };
+            ViewBag.Categories = _categoryService.GetAll();
             return View(model);
         }
 
         [HttpPost]
-        public IActionResult ProductEdit(ProductModel model)
+        public IActionResult ProductEdit(ProductModel model, int[] categoryIds)
         {
             var entity = _productService.GetById(model.ProductId);
             if(entity==null)
@@ -139,7 +141,7 @@ namespace eTicaret.Controllers
             entity.ImageUrl = model.ImageUrl;
             entity.Description = model.Description;
 
-            _productService.Update(entity);
+            _productService.Update(entity,categoryIds);
 
             var msg = new AlertMessage()
             {            

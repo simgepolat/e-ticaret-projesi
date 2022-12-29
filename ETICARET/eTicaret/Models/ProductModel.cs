@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using eTicaret.entity;
 
 namespace eTicaret.Models
 {
@@ -16,5 +18,6 @@ namespace eTicaret.Models
         public string ImageUrl { get; set; }
         public bool IsApproved { get; set; }
         public bool IsHome { get; set; }
+        public List<Category> SelectedCategories { get; set; }
     }
 }

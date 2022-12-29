@@ -35,6 +35,11 @@ namespace eTicaret.business.Concrete
             return _productRepository.GetById(id);
         }
 
+        public Product GetByIdWithCategories(int id)
+        {
+            return _productRepository.GetByIdWithCategories(id);
+        }
+
         public int GetCountByCategory(string category)
         {
             return _productRepository.GetCountByCategory(category);
@@ -63,6 +68,11 @@ namespace eTicaret.business.Concrete
         public void Update(Product entity)
         {
             _productRepository.Update(entity);
+        }
+
+        public void Update(Product entity, int[] categoryIds)
+        {
+            _productRepository.Update(entity,categoryIds);
         }
     }
 }
