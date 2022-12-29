@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 using eTicaret.business.Abstract;
 using eTicaret.entity;
 using eTicaret.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace eTicaret.Controllers
 {
+    [Authorize]
     public class AdminController:Controller
     {
         private IProductService _productService;
