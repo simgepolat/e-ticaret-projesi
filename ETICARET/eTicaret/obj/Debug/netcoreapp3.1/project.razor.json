@@ -14444,6 +14444,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Admin\\CategoryEdit.cshtml",
+      "TargetPath": "Views\\Admin\\CategoryEdit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Admin\\ProductList.cshtml",
       "TargetPath": "Views\\Admin\\ProductList.cshtml",
       "FileKind": "mvc"
@@ -14479,13 +14484,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Admin\\ProductEdit.cshtml",
+      "TargetPath": "Views\\Admin\\ProductEdit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Shop\\List.cshtml",
       "TargetPath": "Views\\Shop\\List.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Admin\\CreateProduct.cshtml",
-      "TargetPath": "Views\\Admin\\CreateProduct.cshtml",
+      "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Admin\\CategoryList.cshtml",
+      "TargetPath": "Views\\Admin\\CategoryList.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14494,8 +14504,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Admin\\Edit.cshtml",
-      "TargetPath": "Views\\Admin\\Edit.cshtml",
+      "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Admin\\ProductCreate.cshtml",
+      "TargetPath": "Views\\Admin\\ProductCreate.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14526,6 +14536,11 @@
     {
       "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Product\\Edit.cshtml",
       "TargetPath": "Views\\Product\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Admin\\CategoryCreate.cshtml",
+      "TargetPath": "Views\\Admin\\CategoryCreate.cshtml",
       "FileKind": "mvc"
     },
     {

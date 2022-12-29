@@ -1,3 +1,4 @@
+@using Newtonsoft.Json
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,12 +17,27 @@
     <main class="my-5">
  
         <div class="container">
+
+            @if(TempData["message"]!=null)
+            {
+                var message = JsonConvert.DeserializeObject<AlertMessage>(TempData["message"] as String);
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-@message.AlertType">
+                            @message.Message
+                        </div>
+                    </div>
+                </div>
+            }
+
+
             @RenderBody()
         </div>
 
     </main>
 
-    <footer class="py-5 bg-dark text-white text-center">
+    <footer class="py-5 bg-secondary text-white text-center">
         Kırtasiye Sitesi | 2023
     </footer>
 

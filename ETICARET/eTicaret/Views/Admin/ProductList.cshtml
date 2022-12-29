@@ -2,11 +2,12 @@
 
 <div class="row">
     <div class="col-md-12">
-        <h1>Admin Ürünler</h1>
+        <h1>Admin-Ürünler</h1>
         <hr>
-        <table class="table table-bordered">
+        <a class="btn btn-outline-dark btn-sm" href="/admin/products/create">Ürün Ekle</a>
+        <table class="table table-bordered mt-3">
             <thead>
-                <tr>
+                <tr class="table-active">
                     <td style="width: 30px;">Id</td>
                     <td style="width: 100px;">Resim</td>
                     <td>Ad</td>
@@ -21,7 +22,7 @@
                 {
                        @foreach (var item in Model.Products)
                         {
-                            <tr>
+                            <tr class="table-active">
                                 <td>@item.ProductId</td>
                                 <td><img src="~/img/@item.ImageUrl" width="80"></td>
                                 <td>@item.Name</td>
@@ -43,7 +44,7 @@
                                     }
                                 </td>
                                 <td>
-                                    <a href="/admin/products/@item.ProductId" class="btn btn-primary btn-sm mr-2">Düzenle</a>
+                                    <a href="/admin/products/@item.ProductId" class="btn btn-info btn-sm mr-2">Düzenle</a>
                                     <form action="/admin/deleteproduct" method="POST" style="display: inline;">
                                         <input type="hidden" name="productId" value="@item.ProductId">
                                         <button type="submit" class="btn btn-danger btn-sm">Sil</button>
