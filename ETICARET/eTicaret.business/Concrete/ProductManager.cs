@@ -15,13 +15,13 @@ namespace eTicaret.business.Concrete
         }
         public void Create(Product entity)
         {
-            // iş kuralları uygula
+            
             _productRepository.Create(entity);
         }
 
         public void Delete(Product entity)
         {
-            // iş kuralları
+            
             _productRepository.Delete(entity);
         }
 
