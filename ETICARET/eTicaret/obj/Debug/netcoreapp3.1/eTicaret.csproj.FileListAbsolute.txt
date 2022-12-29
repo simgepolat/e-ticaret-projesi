@@ -148,3 +148,8 @@ C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicar
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Admin\CategoryEdit.cshtml.g.cs
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ProductEdit.cshtml.g.cs
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ProductCreate.cshtml.g.cs
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
