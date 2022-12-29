@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using eTicaret.business.Abstract;
 using eTicaret.entity;
 using eTicaret.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -133,10 +135,10 @@ namespace eTicaret.Controllers
         }
 
         [HttpPost]
-        public IActionResult ProductEdit(ProductModel model, int[] categoryIds)
+        public async Task<IActionResult> ProductEdit(ProductModel model,int[] categoryIds,IFormFile file)
         {
             if(ModelState.IsValid)
-            {
+            {        
                 var entity = _productService.GetById(model.ProductId);
                 if(entity==null)
                 {
@@ -145,10 +147,22 @@ namespace eTicaret.Controllers
                 entity.Name = model.Name;
                 entity.Price = model.Price;
                 entity.Url = model.Url;
-                entity.ImageUrl = model.ImageUrl;
                 entity.Description = model.Description;
                 entity.IsHome = model.IsHome;
                 entity.IsApproved = model.IsApproved;
+
+                if(file!=null)
+                {
+                    var extention = Path.GetExtension(file.FileName);
+                    var randomName = string.Format($"{Guid.NewGuid()}{extention}");
+                    entity.ImageUrl = randomName;
+                    var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot\\img",randomName);
+
+                    using(var stream = new FileStream(path,FileMode.Create))
+                    {
+                        await file.CopyToAsync(stream);
+                    }
+                }
 
                 if(_productService.Update(entity,categoryIds))
                 {                    
