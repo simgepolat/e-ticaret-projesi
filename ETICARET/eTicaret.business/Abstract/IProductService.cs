@@ -3,7 +3,7 @@ using eTicaret.entity;
 
 namespace eTicaret.business.Abstract
 {
-    public interface IProductService
+    public interface IProductService: IValidator<Product>
     {
         Product GetById(int id);
         Product GetByIdWithCategories(int id);
@@ -14,11 +14,11 @@ namespace eTicaret.business.Abstract
         List<Product> GetHomePageProducts();
         List<Product> GetSearchResult(string searchString);
 
-        void Create(Product entity);
+        bool Create(Product entity);
 
         void Update(Product entity);
         void Delete(Product entity);
         int GetCountByCategory(string category);
-        void Update(Product entity, int[] categoryIds);
+        bool Update(Product entity, int[] categoryIds);
     }
 }

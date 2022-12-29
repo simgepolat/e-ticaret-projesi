@@ -16,6 +16,9 @@ namespace eTicaret.business.Concrete
         {
             _categoryRepository=categoryRepository;
         }
+
+        public string ErrorMessage { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public void Create(Category entity)
         {
              _categoryRepository.Create(entity);
@@ -49,6 +52,11 @@ namespace eTicaret.business.Concrete
         public void Update(Category entity)
         {
             _categoryRepository.Update(entity);
+        }
+
+        public bool Validation(Category entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

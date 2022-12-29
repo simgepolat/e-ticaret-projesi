@@ -47,26 +47,25 @@ namespace eTicaret.Controllers
         [HttpPost]
         public IActionResult ProductCreate(ProductModel model)
         {
-            var entity = new Product()
+            if(ModelState.IsValid)
             {
-                Name = model.Name,
-                Url = model.Url,
-                Price = model.Price,
-                Description = model.Description,
-                ImageUrl = model.ImageUrl
-            };
-            
-            _productService.Create(entity);
-
-            var msg = new AlertMessage()
-            {            
-                Message = $"{entity.Name} isimli ürün eklendi.",
-                AlertType = "success"
-            };
-
-            TempData["message"] =  JsonConvert.SerializeObject(msg);
-
-            return RedirectToAction("ProductList");
+                var entity = new Product()
+                {
+                    Name = model.Name,
+                    Url = model.Url,
+                    Price = model.Price,
+                    Description = model.Description,
+                    ImageUrl = model.ImageUrl
+                };
+                if(_productService.Create(entity))
+                    {                    
+                        CreateMessage("kayıt eklendi","success");
+                        return RedirectToAction("ProductList");
+                    }
+                    CreateMessage(_productService.ErrorMessage,"danger");
+                    return View(model);
+            }
+            return View(model);
         }
 
         [HttpGet]
@@ -78,24 +77,28 @@ namespace eTicaret.Controllers
         [HttpPost]
         public IActionResult CategoryCreate(CategoryModel model)
         {
-            var entity = new Category()
+            if(ModelState.IsValid)
             {
-                Name = model.Name,
-                Url = model.Url            
-            };
-            
-            _categoryService.Create(entity);
+                var entity = new Category()
+                {
+                    Name = model.Name,
+                    Url = model.Url            
+                };
+                
+                _categoryService.Create(entity);
 
-            var msg = new AlertMessage()
-            {            
-                Message = $"{entity.Name} isimli category eklendi.",
-                AlertType = "success"
-            };
+                var msg = new AlertMessage()
+                {            
+                    Message = $"{entity.Name} isimli category eklendi.",
+                    AlertType = "success"
+                };
 
-            TempData["message"] =  JsonConvert.SerializeObject(msg);
+                TempData["message"] =  JsonConvert.SerializeObject(msg);
 
 
-            return RedirectToAction("CategoryList");
+                return RedirectToAction("CategoryList");
+            }
+            return View(model);
         }
 
         [HttpGet]
@@ -121,6 +124,8 @@ namespace eTicaret.Controllers
                 Price = entity.Price,
                 ImageUrl= entity.ImageUrl,
                 Description = entity.Description,
+                IsApproved = entity.IsApproved,
+                IsHome = entity.IsHome,
                 SelectedCategories = entity.ProductCategories.Select(i=>i.Category).ToList()
             };
             ViewBag.Categories = _categoryService.GetAll();
@@ -130,28 +135,30 @@ namespace eTicaret.Controllers
         [HttpPost]
         public IActionResult ProductEdit(ProductModel model, int[] categoryIds)
         {
-            var entity = _productService.GetById(model.ProductId);
-            if(entity==null)
+            if(ModelState.IsValid)
             {
-                return NotFound();
+                var entity = _productService.GetById(model.ProductId);
+                if(entity==null)
+                {
+                    return NotFound();
+                }
+                entity.Name = model.Name;
+                entity.Price = model.Price;
+                entity.Url = model.Url;
+                entity.ImageUrl = model.ImageUrl;
+                entity.Description = model.Description;
+                entity.IsHome = model.IsHome;
+                entity.IsApproved = model.IsApproved;
+
+                if(_productService.Update(entity,categoryIds))
+                {                    
+                    CreateMessage("kayıt güncellendi","success");
+                    return RedirectToAction("ProductList");
+                }
+                CreateMessage(_productService.ErrorMessage,"danger");
             }
-            entity.Name = model.Name;
-            entity.Price = model.Price;
-            entity.Url = model.Url;
-            entity.ImageUrl = model.ImageUrl;
-            entity.Description = model.Description;
-
-            _productService.Update(entity,categoryIds);
-
-            var msg = new AlertMessage()
-            {            
-                Message = $"{entity.Name} isimli ürün güncellendi.",
-                AlertType = "success"
-            };
-
-            TempData["message"] =  JsonConvert.SerializeObject(msg);
-
-            return RedirectToAction("ProductList");
+            ViewBag.Categories = _categoryService.GetAll();
+            return View(model);
         }
 
         [HttpGet]
@@ -182,25 +189,30 @@ namespace eTicaret.Controllers
         [HttpPost]
         public IActionResult CategoryEdit(CategoryModel model)
         {
-            var entity = _categoryService.GetById(model.CategoryId);
-            if(entity==null)
+            if(ModelState.IsValid)
             {
-                return NotFound();
+                var entity = _categoryService.GetById(model.CategoryId);
+                if(entity==null)
+                {
+                    return NotFound();
+                }
+                entity.Name = model.Name;
+                entity.Url = model.Url;
+
+                _categoryService.Update(entity);
+
+                var msg = new AlertMessage()
+                {            
+                    Message = $"{entity.Name} isimli category güncellendi.",
+                    AlertType = "success"
+                };
+
+                TempData["message"] =  JsonConvert.SerializeObject(msg);
+
+                return RedirectToAction("CategoryList");
             }
-            entity.Name = model.Name;
-            entity.Url = model.Url;
-
-            _categoryService.Update(entity);
-
-              var msg = new AlertMessage()
-            {            
-                Message = $"{entity.Name} isimli category güncellendi.",
-                AlertType = "success"
-            };
-
-            TempData["message"] =  JsonConvert.SerializeObject(msg);
-
-            return RedirectToAction("CategoryList");
+            return View(model);
+            
         }
 
         public IActionResult DeleteProduct(int productId)
@@ -246,6 +258,16 @@ namespace eTicaret.Controllers
         {
             _categoryService.DeleteFromCategory(productId,categoryId);
             return Redirect("/admin/categories/"+categoryId);
+        }
+
+        private void CreateMessage(string message,string alerttype)
+        {
+             var msg = new AlertMessage()
+            {            
+                Message = message,
+                AlertType = alerttype
+            };
+            TempData["message"] =  JsonConvert.SerializeObject(msg);
         }
     }
 }

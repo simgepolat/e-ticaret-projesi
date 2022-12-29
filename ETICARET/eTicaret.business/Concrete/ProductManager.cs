@@ -13,10 +13,17 @@ namespace eTicaret.business.Concrete
         {
             _productRepository = productRepository;
         }
-        public void Create(Product entity)
+
+        public string ErrorMessage { get; set; }
+
+        public bool Create(Product entity)
         {
-            
-            _productRepository.Create(entity);
+            if(Validation(entity))
+            {
+                _productRepository.Create(entity);
+                return true;
+            }
+            return false;
         }
 
         public void Delete(Product entity)
@@ -70,9 +77,40 @@ namespace eTicaret.business.Concrete
             _productRepository.Update(entity);
         }
 
-        public void Update(Product entity, int[] categoryIds)
+        public bool Update(Product entity, int[] categoryIds)
         {
-            _productRepository.Update(entity,categoryIds);
+            if(Validation(entity))
+            {
+                if(categoryIds.Length==0)
+                {
+                    ErrorMessage += "Ürün için en az bir kategori seçmelisiniz.";
+                    return false;
+                }
+                 _productRepository.Update(entity,categoryIds);
+                return true;
+            }
+            return false;          
         }
+
+        public bool Validation(Product entity)
+        {
+            var isValid = true;
+
+            if(string.IsNullOrEmpty(entity.Name))
+            {
+                ErrorMessage += "ürün ismi girmelisiniz.\n";
+                isValid=false;
+            }
+
+            if(entity.Price<0)
+            {
+                ErrorMessage += "ürün fiyatını doğru giriniz.\n";
+                isValid=false;
+            }
+
+            return isValid;
+        }
+
+        
     }
 }
