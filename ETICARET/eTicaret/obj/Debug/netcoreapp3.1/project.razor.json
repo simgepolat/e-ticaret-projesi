@@ -14459,6 +14459,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Admin\\RoleCreate.cshtml",
+      "TargetPath": "Views\\Admin\\RoleCreate.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Shared\\_search.cshtml",
       "TargetPath": "Views\\Shared\\_search.cshtml",
       "FileKind": "mvc"
@@ -14511,6 +14516,11 @@
     {
       "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Admin\\ProductCreate.cshtml",
       "TargetPath": "Views\\Admin\\ProductCreate.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Admin\\RoleList.cshtml",
+      "TargetPath": "Views\\Admin\\RoleList.cshtml",
       "FileKind": "mvc"
     },
     {
