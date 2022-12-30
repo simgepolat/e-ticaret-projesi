@@ -14484,6 +14484,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Account\\ResetPassword.cshtml",
+      "TargetPath": "Views\\Account\\ResetPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Admin\\ProductEdit.cshtml",
       "TargetPath": "Views\\Admin\\ProductEdit.cshtml",
       "FileKind": "mvc"
@@ -14556,6 +14561,11 @@
     {
       "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\simge.polat\\Desktop\\documents-project\\e-ticaret-projesi\\ETICARET\\eTicaret\\Views\\Account\\ForgotPassword.cshtml",
+      "TargetPath": "Views\\Account\\ForgotPassword.cshtml",
       "FileKind": "mvc"
     },
     {
