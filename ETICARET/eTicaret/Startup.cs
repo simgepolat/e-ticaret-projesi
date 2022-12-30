@@ -19,6 +19,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 
+
 namespace eTicaret
 {
     public class Startup
@@ -28,8 +29,7 @@ namespace eTicaret
         {
             _configuration = configuration;
         }
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationContext>(options=> options.UseSqlite("Data Source=shopDb"));
@@ -81,9 +81,10 @@ namespace eTicaret
                     _configuration["EmailSender:Host"],
                     _configuration.GetValue<int>("EmailSender:Port"),
                     _configuration.GetValue<bool>("EmailSender:EnableSSL"),
-                    _configuration["EmailSender:UserName"],
+                    _configuration["EmailSender:Email"],
                     _configuration["EmailSender:Password"])
                 );
+                //denendiFFFFFFFFFFFFFFFFFFFFFFFF
                 
             services.AddControllersWithViews();
         }

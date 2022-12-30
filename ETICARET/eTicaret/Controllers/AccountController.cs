@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 
 namespace eTicaret.Controllers
 {
-    [AutoValidateAntiforgeryToken]
+    
     public class AccountController:Controller
     {
         private UserManager<User> _userManager;
@@ -32,7 +32,7 @@ namespace eTicaret.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        
         public async Task<IActionResult> Login(LoginModel model)
         {
             if(!ModelState.IsValid)
@@ -72,7 +72,7 @@ namespace eTicaret.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        
         public async Task<IActionResult> Register(RegisterModel model)
         {
             if(!ModelState.IsValid)
@@ -97,8 +97,10 @@ namespace eTicaret.Controllers
                     userId = user.Id,
                     token = code
                 });
-                // email
-                await _emailSender.SendEmailAsync(model.Email,"Hesabınızı onaylayınız.",$"Lütfen email hesabınızı onaylamak için linke <a href='https://localhost:5001{url}'>tıklayınız.</a>");
+                 // email
+                Console.WriteLine(model.Email +"abc");
+                
+                await _emailSender.SendEmailAsync(model.Email,"Hesabinizi onaylayiniz.",$"Lütfen email hesabinizi onaylamak için linke <a href='https://localhost:5001{url}'>tiklayiniz.</a>");
                 return RedirectToAction("Login","Account");
             }
 
