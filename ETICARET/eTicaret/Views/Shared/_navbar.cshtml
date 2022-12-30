@@ -5,21 +5,47 @@
                 <li  class="nav-item  mr-2">
                     <a href="/products" class="nav-link btn btn-outline-dark text-white">Ürünler</a>
                 </li>
-                <li class="nav-item  mr-2">
-                    <a href="" class="nav-link btn btn-outline-dark text-white">Cart</a>
-                </li>
-                  <li class="nav-item  mr-2">
-                    <a href="" class="nav-link btn btn-outline-dark text-white">Orders</a>
-                </li>
-                </li>
-                <li class="nav-item  mr-2">
-                    <a href="/admin/products" class="nav-link btn btn-outline-dark text-white">Admin-Ürünler</a>
-                </li>
-                <li class="nav-item  mr-2">
-                    <a href="/admin/categories" class="nav-link btn btn-outline-dark text-white">Admin-Kategoriler</a>
-                </li>
+                @if(User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item  mr-2">
+                        <a href="" class="nav-link btn btn-outline-dark text-white">Cart</a>
+                    </li>
+                    <li class="nav-item  mr-2">
+                        <a href="" class="nav-link btn btn-outline-dark text-white">Orders</a>
+                    </li>
+                    
+                    <li class="nav-item  mr-2">
+                        <a href="/admin/products" class="nav-link btn btn-outline-dark text-white">Admin-Ürünler</a>
+                    </li>
+                    <li class="nav-item  mr-2">
+                        <a href="/admin/categories" class="nav-link btn btn-outline-dark text-white">Admin-Kategoriler</a>
+                    </li>
+                }
+            </ul>
+            <ul class="navbar-nav ml-auto">
+
+                @if(User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item">
+                        <a href="/account/manage" class="nav-link">
+                            @User.Identity.Name
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/account/logout" class="nav-link">Çıkış</a>
+                    </li>
+                }
+                else
+                {                    
+                    <li class="nav-item">
+                        <a href="/account/login" class="nav-link">Giriş</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/account/register" class="nav-link">Kaydol</a>
+                    </li>    
+                }
             </ul>
 
             
         </div>
-    </div>
+</div>

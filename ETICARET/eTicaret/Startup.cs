@@ -7,12 +7,14 @@ using eTicaret.business.Abstract;
 using eTicaret.business.Concrete;
 using eTicaret.data.Abstract;
 using eTicaret.data.Concrete.EfCore;
+using eTicaret.EmailServices;
 using eTicaret.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
@@ -21,6 +23,11 @@ namespace eTicaret
 {
     public class Startup
     {
+        private IConfiguration _configuration;
+        public Startup(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
@@ -44,7 +51,7 @@ namespace eTicaret
 
                 // options.User.AllowedUserNameCharacters = "";
                 options.User.RequireUniqueEmail = true;
-                options.SignIn.RequireConfirmedEmail = false;
+                options.SignIn.RequireConfirmedEmail = true;
                 options.SignIn.RequireConfirmedPhoneNumber = false;
             });
 
@@ -57,7 +64,8 @@ namespace eTicaret
                 options.Cookie = new CookieBuilder
                 {
                     HttpOnly = true,
-                    Name = ".ShopApp.Security.Cookie"
+                    Name = ".ShopApp.Security.Cookie",
+                    SameSite = SameSiteMode.Strict
                 };
             });
 
@@ -68,6 +76,15 @@ namespace eTicaret
              services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<IProductService, ProductManager>();
             
+            services.AddScoped<IEmailSender,SmtpEmailSender>(i=> 
+                new SmtpEmailSender(
+                    _configuration["EmailSender:Host"],
+                    _configuration.GetValue<int>("EmailSender:Port"),
+                    _configuration.GetValue<bool>("EmailSender:EnableSSL"),
+                    _configuration["EmailSender:UserName"],
+                    _configuration["EmailSender:Password"])
+                );
+                
             services.AddControllersWithViews();
         }
 
