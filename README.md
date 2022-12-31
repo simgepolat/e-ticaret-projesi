@@ -1,2 +1,2 @@
 # e-ticaret-projesi
- Profesyonel Yazılım Mühendisliği Uygulamaları Projesi
+ Profesyonel Yazılım Mühendisliği Uygulamaları Dersi Projesi
