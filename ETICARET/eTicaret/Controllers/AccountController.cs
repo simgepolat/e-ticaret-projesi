@@ -160,7 +160,7 @@ namespace eTicaret.Controllers
             });
 
             // email
-            await _emailSender.SendEmailAsync(Email,"Reset Password",$"Parolanızı yenilemek için linke <a href='https://localhost:5001{url}'>tıklayınız.</a>");
+            await _emailSender.SendEmailAsync(Email,"Reset Password",$"Parolanizi yenilemek için linke <a href='https://localhost:5001{url}'>tıklayınız.</a>");
 
             return View();
         }
