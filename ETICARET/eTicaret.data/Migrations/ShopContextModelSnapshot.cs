@@ -82,17 +82,9 @@ namespace eTicaret.data.Migrations
 
             modelBuilder.Entity("eTicaret.entity.ProductCategory", b =>
                 {
-                    b.HasOne("eTicaret.entity.Category", "Category")
-                        .WithMany("ProductCategories")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("eTicaret.entity.Product", "Product")
-                        .WithMany("ProductCategories")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("eTicaret.entity.Category", "Category").WithMany("ProductCategories").HasForeignKey("CategoryId").OnDelete(DeleteBehavior.Cascade).IsRequired();
+                    b.HasOne("eTicaret.entity.Product", "Product").WithMany("ProductCategories").HasForeignKey("ProductId").OnDelete(DeleteBehavior.Cascade).IsRequired(); 
+                    
                 });
 #pragma warning restore 612, 618
         }
