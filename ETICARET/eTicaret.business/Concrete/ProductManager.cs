@@ -83,7 +83,7 @@ namespace eTicaret.business.Concrete
             {
                 if(categoryIds.Length==0)
                 {
-                    ErrorMessage += "Ürün için en az bir kategori seçmelisiniz.";
+                    ErrorMessage += "Ürün icin en az bir kategori seçmelisiniz.";
                     return false;
                 }
                  _productRepository.Update(entity,categoryIds);
