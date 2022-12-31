@@ -1,6 +1,6 @@
 <div class="navbar bg-secondary navbar-light navbar-expand-sm ">
         <div class="container">
-            <a href="/" class="navbar-brand  btn btn-dark text-white btn-lg">Kırtasiye e-ticaret Sitesi</a>
+            <a href="/" class="navbar-brand  btn btn-dark text-white ">Kırtasiye e-ticaret Sitesi</a>
             <ul class="navbar-nav mr-auto">
                 <li  class="nav-item  mr-2">
                     <a href="/products" class="nav-link btn btn-outline-dark text-white">Ürünler</a>
@@ -8,18 +8,24 @@
                 @if(User.Identity.IsAuthenticated)
                 {
                     <li class="nav-item  mr-2">
-                        <a href="" class="nav-link btn btn-outline-dark text-white">Cart</a>
-                    </li>
-                    <li class="nav-item  mr-2">
-                        <a href="" class="nav-link btn btn-outline-dark text-white">Orders</a>
-                    </li>
-                    
-                    <li class="nav-item  mr-2">
-                        <a href="/admin/products" class="nav-link btn btn-outline-dark text-white">Admin-Ürünler</a>
-                    </li>
-                    <li class="nav-item  mr-2">
-                        <a href="/admin/categories" class="nav-link btn btn-outline-dark text-white">Admin-Kategoriler</a>
-                    </li>
+                            <a href="" class="nav-link btn btn-outline-dark text-white">Hakkında</a>
+                        </li>
+
+                    if(User.IsInRole("admin"))
+                    {                   
+                        <li class="nav-item  mr-2">
+                            <a href="/admin/products" class="nav-link btn btn-outline-dark text-white">Ürünler</a>
+                        </li>
+                        <li class="nav-item  mr-2">
+                            <a href="/admin/categories" class="nav-link btn btn-outline-dark text-white btn">Kategoriler</a>
+                        </li>
+                        <li class="nav-item  mr-2">
+                            <a href="/admin/role/list" class="nav-link btn btn-outline-dark text-white">Roller</a>
+                        </li>
+                        <li class="nav-tem mr-2">
+                            <a href="/admin/user/list" class="nav-link btn btn-outline-dark text-white">Kullanıcılar</a>
+                        </li>
+                    }
                 }
             </ul>
             <ul class="navbar-nav ml-auto">
@@ -32,16 +38,16 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/account/logout" class="nav-link">Çıkış</a>
+                        <a href="/account/logout" class="nav-link btn btn-outline-dark text-white">Çıkış</a>
                     </li>
                 }
                 else
                 {                    
                     <li class="nav-item">
-                        <a href="/account/login" class="nav-link">Giriş</a>
+                        <a href="/account/login" class="nav-link btn btn-outline-dark text-white">Giriş</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/account/register" class="nav-link">Kaydol</a>
+                        <a href="/account/register" class="nav-link btn btn-outline-dark text-white">Kaydol</a>
                     </li>    
                 }
             </ul>

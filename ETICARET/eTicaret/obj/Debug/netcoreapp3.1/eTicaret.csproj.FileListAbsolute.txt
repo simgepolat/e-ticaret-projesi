@@ -136,9 +136,6 @@ C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicar
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\bin\Debug\netcoreapp3.1\eTicaret.business.pdb
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Shop\List.cshtml.g.cs
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Shop\Details.cshtml.g.cs
-C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
-C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\eTicaret.csprojAssemblyReference.cache
-C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\staticwebassets\eTicaret.StaticWebAssets.xml
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_search.cshtml.g.cs
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Shop\Search.cshtml.g.cs
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ProductList.cshtml.g.cs
@@ -160,3 +157,10 @@ C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicar
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Admin\RoleCreate.cshtml.g.cs
 C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Admin\RoleList.cshtml.g.cs
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Admin\RoleEdit.cshtml.g.cs
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Account\AccessDenied.cshtml.g.cs
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Admin\UserList.cshtml.g.cs
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\Razor\Views\Admin\UserEdit.cshtml.g.cs
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\eTicaret.csprojAssemblyReference.cache
+C:\Users\simge.polat\Desktop\documents-project\e-ticaret-projesi\ETICARET\eTicaret\obj\Debug\netcoreapp3.1\staticwebassets\eTicaret.StaticWebAssets.xml

@@ -209,5 +209,10 @@ namespace eTicaret.Controllers
             };
             TempData["message"] =  JsonConvert.SerializeObject(msg);
         }
+
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
     }
 }
